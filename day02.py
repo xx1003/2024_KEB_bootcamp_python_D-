@@ -1,24 +1,10 @@
-x = 2
-y = x + 5  # NameError: name 'x' is not defined
-print(y)
-
-# isinstance(객체, 자료형) 둘이 같으면 true, 다르면 false return
-print(type(3.14))  # float
-print((type(3.14)) == float)  # true
-print(isinstance(3.14, float))  # true
-print(isinstance("Inha", float))  # false
-print(isinstance(55, float))  # false
-
-artists = ['BTS', '뉴진스', '핑클', 'SES', 'HOT', '블랙핑크']
-groups = artists  # 복제가 아니라 참조의 개념. 같은 곳을 바라보고 있기 때문
-print(artists, groups)
-groups[2] = '세븐틴'
-print(artists, groups)
-
-
-# 이건 immutable이어서 그런가??
-# a = 1
-# b = a
-# print(a, b)  # 1 1
-# b = 2
-# print(a, b)  # 1 2
+# 거듭제곱
+base_number = int(input('Input base number : '))
+exponent_number = int(input('Input exponent number : '))
+print(f'밑은 {base_number}, 지수는 {exponent_number}, 결과 값은 {base_number**exponent_number}')
+# money = 5,000,000
+# print(money)  # (5, 0, 0)
+# print(type(money))  # tuple
+# cash = 5_000_000
+# print(cash)  # 5000000
+# print(type(cash))  # int
