@@ -1,18 +1,24 @@
-# 리터럴 값은 대부분 오른쪽에 옴. 값을 변경하거나 저장할 수 없음.
-# SyntaxError: cannot assign to literal here.
-# "univ" = "Inha University"
-# 99 = 71
+x = 2
+y = x + 5  # NameError: name 'x' is not defined
+print(y)
 
-# Ok
-# case-sensitive
-abc = 7
-Abc = 8
-ABC = 6
-print(abc, Abc, ABC)
+# isinstance(객체, 자료형) 둘이 같으면 true, 다르면 false return
+print(type(3.14))  # float
+print((type(3.14)) == float)  # true
+print(isinstance(3.14, float))  # true
+print(isinstance("Inha", float))  # false
+print(isinstance(55, float))  # false
 
-test9 = 77
-# 9test = 77
-_9test = 77
-print(test9, _9test)
+artists = ['BTS', '뉴진스', '핑클', 'SES', 'HOT', '블랙핑크']
+groups = artists  # 복제가 아니라 참조의 개념. 같은 곳을 바라보고 있기 때문
+print(artists, groups)
+groups[2] = '세븐틴'
+print(artists, groups)
 
-# False = 123  # reserved words(예약어)
+
+# 이건 immutable이어서 그런가??
+# a = 1
+# b = a
+# print(a, b)  # 1 1
+# b = 2
+# print(a, b)  # 1 2
