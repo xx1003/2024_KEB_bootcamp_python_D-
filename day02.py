@@ -10,4 +10,16 @@ if menu == '1':
 elif menu == '2':
     celsius = float(input('Input Celsius : '))
     print(f'Celsius : {celsius}C, Fahrenheit : {((celsius * 9.0/5.0) + 32.0):.4f}F')
+else:
+    print('Terminate Program.')
+
+
+# temp = [0]
+temp = []
+if temp:
+    print('원소가 존재하는 리스트')
+else:
+    print('비어있는 리스트')
+
+
 
