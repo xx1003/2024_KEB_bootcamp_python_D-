@@ -1,19 +1,6 @@
-course = "* KEB 2024# KEB !Bootcamp KEB...*!#"
-print(course.find("KEB"))  # 제일 먼저 찾은 거 리턴
-print(course.rfind("KEB"))  # reverse find
-print(course.index("KEB"))
-print(course.rindex("KEB"))
-print(course.find("INHA"))  # -1
-print(course.index("INHA"))  # ValueError: substring not found
-
-print(course)
-course = course.replace('KEB','INHA',2)
-print(course)
-print(course.strip())
-print(course.strip("!#*"))  # 양쪽 끝에 연속된 애들만 지워짐. 중간 애들 안 지워짐.
-
-# print(course)
-# print(course.replace('KEB','INHA'))
-# print(course)  # 안바뀜. immutable
-# course = course.replace('KEB','INHA')  # 부분은 할당 안 되지만, 전체는 바꿀 수 있음.
-# print(course)
+subjects = "python c++ database linux"
+subject = input("수강신청과목 입력 : ")
+if subjects.find(subject) != -1:
+    print(f"해당 과목은 존재합니다. 위치는 {subjects.find(subject)}번 인덱스입니다.")
+else:
+    print('해당과목이 존재하지 않습니다.')
