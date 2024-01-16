@@ -1,42 +1,27 @@
-# 연습문제 6.1
-numbers = [3, 2, 1, 0]
-for number in numbers:
-    print(number, end = ' ')
-
-print()
-
-for number in range(3, -1, -1):
-    print(number, end = ' ')
-
-print()
-
-
-# 연습문제 6.2
-guess_me = 7
-number = 1
+import random
 
 while True:
-    if number < guess_me:
-        print("too low")
-    elif number == guess_me:
-        print("found it!")
-        break
+    print("<Guess Number Game Start>")
+    guess_num = random.randint(1, 11)
+    for i in range(10):
+        number = int(input("Guess number!(1 ~ 10) : "))
+        if number < guess_num:
+            print("Too low!")
+        elif number == guess_num:
+            print("Found it!")
+            break
+        else:
+            print("Too high!")
     else:
-        print("oops")
+        print("You failed ㅠㅠ")
+
+    menu = input("1) Try again  2) Quit game : ")
+    if menu == '1':
+        continue
+    elif menu == '2':
         break
 
-    number += 1
 
 
-# 연습문제 6.3
-guess_me = 5
 
-for number in range(10):
-    if number < guess_me:
-        print("too low")
-    elif number == guess_me:
-        print("found it!")
-        break
-    else:
-        print("oops")
-        break
+
