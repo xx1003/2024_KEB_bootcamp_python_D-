@@ -1,5 +1,8 @@
 # preview
 subjects = "python c++ database linux"
+print('%e' % (0.7045))
+
+print(subjects.isalnum())  # 알파벳 또는 숫자로만. 띄어쓰기도 X
 subject = input("수강신청과목 입력 : ")
 
 try:
