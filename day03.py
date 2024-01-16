@@ -1,14 +1,19 @@
-subjects = ['python', 'c++', 'database']
-subjects_string = " / ".join(subjects)
-print(subjects_string)
+course = "* KEB 2024# KEB !Bootcamp KEB...*!#"
+print(course.find("KEB"))  # 제일 먼저 찾은 거 리턴
+print(course.rfind("KEB"))  # reverse find
+print(course.index("KEB"))
+print(course.rindex("KEB"))
+print(course.find("INHA"))  # -1
+print(course.index("INHA"))  # ValueError: substring not found
 
-numbers = input("FirstNumber SecondNumber : ").split()
-print(numbers[0] + numbers[1])  # concatenation
-print(int(numbers[0])+ int(numbers[1]))  # arithmetic operation
+print(course)
+course = course.replace('KEB','INHA',2)
+print(course)
+print(course.strip())
+print(course.strip("!#*"))  # 양쪽 끝에 연속된 애들만 지워짐. 중간 애들 안 지워짐.
 
-# course = "2024 KEB Bootcamp"
 # print(course)
-# # list_course = course.split()  # 띄어쓰기로 구분
-# list_course = course.split('B')
-# print(list_course)
-
+# print(course.replace('KEB','INHA'))
+# print(course)  # 안바뀜. immutable
+# course = course.replace('KEB','INHA')  # 부분은 할당 안 되지만, 전체는 바꿀 수 있음.
+# print(course)
