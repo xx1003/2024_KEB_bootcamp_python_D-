@@ -11,7 +11,7 @@ for number in range(n1, n2 + 1):
             continue
     else:
         i = 2
-        while i*i < number:  # 반복 횟수 줄임
+        while i*i <= number:  # 반복 횟수 줄임
             if number % i == 0:
                 isPrime = False
                 break
