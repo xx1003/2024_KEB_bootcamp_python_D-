@@ -1,11 +1,11 @@
-import copy
-# subjects = ["a", "b", "c"]
-subjects = ["a", ["b", "c"], "d"]
-a = subjects
-b = subjects.copy()
-c = list(subjects)
-d = subjects[:]
-e = copy.deepcopy(a)
-print(subjects, a, b, c, d, e)
-subjects[1][1] = "x"
-print(subjects, a, b, c, d, e)
+# squares = list()
+# for i in range(1,6):
+#     squares.append(i*i)
+# print(squares)
+
+# list comprehension
+# squares = [i*i for i in range(1, 6, 1)]
+# print(squares)
+
+even = [i*i for i in range(1, 6, 1) if i % 2 == 0]
+print(even)
