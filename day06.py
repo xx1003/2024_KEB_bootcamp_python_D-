@@ -1,3 +1,4 @@
+# Open Closed Principle
 def test(f):
     """
     데코레이터 함수, 함수 시작하면 start 출력, 함수 끝나면 end 출력
@@ -14,8 +15,9 @@ def test(f):
     return test_in
 
 
+@test
 def greeting():
     print("안녕하세요~")
 
-t = test(greeting)
-t()
+
+greeting()
