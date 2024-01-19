@@ -15,6 +15,12 @@ class Pokemon:
     def attack(self):
         print("공격")
 
+    def get_name(self):
+        return self.name
+
+    def set_name(self, new_name):
+        self.name = new_name
+
 
 class Charizard(Pokemon, FlyingMixin):
     pass
@@ -31,6 +37,12 @@ c1 = Charizard("리자몽")
 # c1.attack()
 # # Charizard.attack()  # 에러 남
 # Charizard.attack(c1)
-print(g1.name)
-g1.name = "잉어킹"
-print(g1.name)
+# print(g1.name)
+# g1.name = "잉어킹"
+# print(g1.name)
+
+print(g1.get_name())
+g1.set_name("잉어킹")
+print(g1.get_name())
+
+
