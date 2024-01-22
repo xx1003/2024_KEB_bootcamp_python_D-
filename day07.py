@@ -9,8 +9,9 @@ class SwimmingMixin:
 
 
 class Pokemon:
-    def __init__(self, name):
+    def __init__(self, name, hp):
         self.__name = name
+        self.hp = hp
 
     def attack(self):
         print("공격")
@@ -29,6 +30,7 @@ class Pokemon:
 
     def __add__(self, target):
         return self.__name + " " + target.__name
+        # return f'두 포켓몬스터 체력의 합은 {self.hp + target.hp}입니다.'
 
 
 class Charizard(Pokemon, FlyingMixin):
@@ -39,8 +41,8 @@ class Garados(Pokemon, SwimmingMixin):
     pass
 
 
-g1 = Garados("갸라도스")
-c1 = Charizard("리자몽")
+g1 = Garados("갸라도스", 100)
+c1 = Charizard("리자몽", 120)
 print(g1)
 print(c1)
-print(g1+c1)
+print(g1 + c1)
